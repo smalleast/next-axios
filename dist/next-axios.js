@@ -87,8 +87,16 @@
 
       },
       delete: function (inName, inData) {
-        var axiosUrl = !!inData ? inName + '/' + inData : inName;
-        return axios.delete(axiosUrl);
+        if (typeof (inData) === "object") {
+          var idStr = !!inId ? inName + '/' + inId : inName;
+          return axios.delete(idStr, {
+            params: inData,
+            data: inData
+          });
+        } else {
+          var axiosUrl = !!inData ? inName + '/' + inData : inName;
+          return axios.delete(axiosUrl);
+        }
       }
     }
   });
