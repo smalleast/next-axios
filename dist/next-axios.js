@@ -89,10 +89,13 @@
           return axios.put(axiosUrl);
         }
       },
-      delete: function(inName, inData, inId) {
+      delete: function(inName, inData) {
         if (typeof inData === "object") {
           var idStr = !!inId ? inName + "/" + inId : inName;
-          return axios.delete(idStr, inData);
+          return axios.delete(idStr, {
+            params: inData,
+            data: inData
+          });
         } else {
           var axiosUrl = !!inData ? inName + "/" + inData : inName;
           return axios.delete(axiosUrl);
