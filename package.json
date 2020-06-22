@@ -1,6 +1,6 @@
 {
   "name": "next-axios",
-  "version": "0.0.0",
+  "version": "1.0.1",
   "description": "Axios common features based on next toolkit.",
   "homepage": "https://github.com/smalleast/next-axios",
   "author": {
@@ -20,7 +20,6 @@
     "gulp-rename": "^1.2.2",
     "gulp-size": "^2.1.0",
     "gulp-uglify": "^2.1.2",
-    "next-js-core2": "github:smalleast/next-js-core2",
     "yargs": "^4.7.1"
   },
   "dependencies": {
